@@ -31,14 +31,18 @@ Origin will try to update itself again and this time, it will succeed.
 
 Origin's overlay, Origin In-Game, doesn't run well under Wine and because of this we recommend you disable it to avoid any potential issues. If a game requires it for certain features go ahead and enable it but no guarantees!
 
-### Blank window with i3 WM
+### Blank window with tiling window managers
 
-Origin is composed of multiple smaller windows so i3 will tile that making the main Origin window look empty.
+Origin is composed of multiple smaller windows so tiling window managers will tile that making the main Origin window look empty.
 
-To fix this add the following to your i3 config file:
+To fix this add the following to your respective config file (examples given for i3-wm/bspwm):
 
 ```
 for_window [instance="origin.exe"] floating enable
+```
+
+```
+bspc rule -a origin.exe state=floating
 ```
 
 ### Game Installs:
